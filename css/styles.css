@@ -1,0 +1,275 @@
+/* Global Styles */
+:root {
+    --bg: #f7f2e8;
+    --bg-soft: #efe4d1;
+    --surface: #fffaf2;
+    --surface-strong: #f9eedb;
+    --text: #2d2620;
+    --muted: #665a4d;
+    --accent: #1f7a6b;
+    --accent-strong: #155c51;
+    --line: #ddcfb8;
+    --shadow: 0 12px 28px rgba(66, 45, 19, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top right, rgba(31, 122, 107, 0.14), transparent 50%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+    min-height: 100vh;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    padding: 1.5rem 1rem 1rem;
+    background: linear-gradient(150deg, #fff6e8 0%, #efe2cd 100%);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 8px 20px rgba(66, 45, 19, 0.08);
+}
+
+header h1,
+h1 {
+    font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+    line-height: 1.2;
+    margin-bottom: 0.65rem;
+    color: #231d17;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 950;
+    width: min(1080px, calc(100% - 2rem));
+    margin: 1rem auto 0;
+    padding: 0.7rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background-color: rgba(255, 250, 242, 0.88);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 8px 24px rgba(66, 45, 19, 0.1);
+    display: flex;
+    gap: 0.55rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    transition: background-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+nav a + a {
+    border-left: none;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: var(--accent);
+    transform: translateY(-1px);
+}
+
+main,
+section {
+    width: min(1080px, calc(100% - 2rem));
+    margin: 1.4rem auto 2rem;
+    padding: clamp(1.2rem, 2.5vw, 2rem);
+    background: linear-gradient(180deg, var(--surface) 0%, var(--surface-strong) 100%);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+p {
+    color: var(--muted);
+}
+
+.status-message {
+    margin-bottom: 1rem;
+    color: #403529;
+    font-weight: 600;
+}
+
+.success-message {
+    color: #146240;
+}
+
+.error-message {
+    color: #a12b2b;
+}
+
+.weight-form {
+    display: flex;
+    align-items: end;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    margin: 0.9rem 0 0.7rem;
+}
+
+.weight-form label {
+    color: #342a21;
+    font-weight: 700;
+}
+
+.weight-form input {
+    padding: 0.56rem 0.7rem;
+    border: 1px solid #c9b89e;
+    border-radius: 10px;
+    color: #2b241c;
+    outline: none;
+}
+
+.weight-form input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(31, 122, 107, 0.2);
+}
+
+.weight-form button {
+    padding: 0.58rem 1rem;
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    background-color: var(--accent);
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.weight-form button:hover {
+    background-color: var(--accent-strong);
+    transform: translateY(-1px);
+}
+
+.table-heading {
+    color: #2f271f;
+    margin-bottom: 0.8rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+}
+
+.animals-table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    background-color: #fff9ef;
+}
+
+.animals-table th,
+.animals-table td {
+    border: 1px solid #dbc8ad;
+    padding: 0.68rem 0.75rem;
+    text-align: center;
+}
+
+.animals-table th {
+    background-color: #eadcc7;
+    color: #241e18;
+    font-weight: 800;
+}
+
+.animals-table td {
+    color: #3d3228;
+}
+
+.animals-table tbody tr:nth-child(even) {
+    background-color: #f9f0df;
+}
+
+.animals-table tbody tr:hover {
+    background-color: #e7d2b4;
+    transition: background-color 0.2s ease;
+}
+
+.weather-chart {
+    margin-top: 0.8rem;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background-color: #fff9ef;
+    padding: 0.8rem;
+    overflow-x: auto;
+}
+
+.weather-chart svg {
+    width: 100%;
+    min-width: 680px;
+    height: auto;
+    display: block;
+}
+
+.chart-axis {
+    stroke: #8e7d66;
+    stroke-width: 1.5;
+}
+
+.chart-line {
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 3;
+}
+
+.chart-point {
+    fill: var(--accent-strong);
+}
+
+.chart-label {
+    fill: #4f4336;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+}
+
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 67% 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.two-column-layout .main-column,
+.two-column-layout .side-column {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.two-column-layout .side-column {
+    border-left: 1px solid #ccb79a;
+    padding-left: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    nav {
+        border-radius: 18px;
+    }
+
+    .two-column-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .two-column-layout .side-column {
+        border-left: none;
+        border-top: 1px solid #ccb79a;
+        padding-left: 0;
+        padding-top: 1rem;
+    }
+}

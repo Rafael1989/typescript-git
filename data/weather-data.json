@@ -1,0 +1,35 @@
+[
+  {
+    "day": 1,
+    "max_temp": 22.5,
+    "min_temp": 3.0,
+    "mean_temp": 12.8,
+    "heat_deg_days": 5.2,
+    "cool_deg_days": 0.0,
+    "total_rain": 0.6,
+    "total_snow": 0.0,
+    "total_precip": 0.6
+  },
+  {
+    "day": 2,
+    "max_temp": 19.0,
+    "min_temp": 7.5,
+    "mean_temp": 13.3,
+    "heat_deg_days": 4.7,
+    "cool_deg_days": 0.0,
+    "total_rain": 0.2,
+    "total_snow": 0.0,
+    "total_precip": 0.2
+  },
+  {
+    "day": 3,
+    "max_temp": 17.8,
+    "min_temp": 6.2,
+    "mean_temp": 11.9,
+    "heat_deg_days": 6.1,
+    "cool_deg_days": 0.0,
+    "total_rain": 1.4,
+    "total_snow": 0.0,
+    "total_precip": 1.4
+  }
+]

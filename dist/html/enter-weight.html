@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Weight</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="enter-weight.html">Enter Weight</a>
+        <a href="show-weights.html">Show Weights</a>
+        <a href="animals.html">Animals</a>
+        <a href="weather-data.html">Weather Data</a>
+    </nav>
+    <main>
+        <h1>Enter Weight</h1>
+        <p>Enter a weight between 50 and 400.</p>
+        <form id="weight-form" class="weight-form" novalidate>
+            <label for="weight-input">Weight</label>
+            <input id="weight-input" name="weight" type="number" min="50" max="400" step="1" required>
+            <button type="submit">Validate</button>
+        </form>
+        <p id="weight-message" class="status-message"></p>
+    </main>
+    <script src="../bundle.js"></script>
+</body>
+</html>

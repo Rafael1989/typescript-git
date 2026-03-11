@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Weights</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="enter-weight.html">Enter Weight</a>
+        <a href="show-weights.html">Show Weights</a>
+        <a href="animals.html">Animals</a>
+        <a href="weather-data.html">Weather Data</a>
+    </nav>
+    <main>
+        <h1>Show Weights</h1>
+        <p id="weights-status" class="status-message">Loading weights...</p>
+        <div class="table-wrapper">
+            <table class="animals-table" aria-label="Saved weights">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Weight</th>
+                        <th scope="col">Created At</th>
+                    </tr>
+                </thead>
+                <tbody id="weights-table-body"></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="../bundle.js"></script>
+</body>
+</html>

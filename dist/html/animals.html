@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="enter-weight.html">Enter Weight</a>
+        <a href="show-weights.html">Show Weights</a>
+        <a href="animals.html">Animals</a>
+        <a href="weather-data.html">Weather Data</a>
+    </nav>
+    <main>
+        <h1>Animals</h1>
+        <p>Data loaded from the free test API.</p>
+        <p id="animals-status" class="status-message">Loading animals...</p>
+        <h2 class="table-heading">Animal Directory</h2>
+        <div class="table-wrapper">
+            <table class="animals-table" aria-label="Animals table">
+                <thead>
+                    <tr>
+                        <th scope="col">Species</th>
+                        <th scope="col">Family</th>
+                        <th scope="col">Habitat</th>
+                    </tr>
+                </thead>
+                <tbody id="animals-table-body"></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="../bundle.js"></script>
+</body>
+</html>

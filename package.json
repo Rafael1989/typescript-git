@@ -1,0 +1,24 @@
+{
+  "name": "competition",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack serve --mode development",
+    "watch": "webpack --mode development --watch",
+    "mock": "node mock-server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "copy-webpack-plugin": "^14.0.0",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "webpack": "^5.105.4",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.3"
+  }
+}
